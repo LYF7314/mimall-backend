@@ -26,7 +26,7 @@ public class CategoryController {
 
 	/*
 	 * @Author Liyifan
-	 * @Description
+	 * @Description 获取商品种类 以多级菜单形似呈现
 	 * @Param []
 	 * @return edu.hit.vo.ResponseVo<java.util.List<edu.hit.vo.CategoryVo>>
 	 **/

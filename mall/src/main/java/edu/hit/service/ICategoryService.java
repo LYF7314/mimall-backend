@@ -10,4 +10,6 @@ public interface ICategoryService {
 
 	ResponseVo<List<CategoryVo>> selectAll();
 
+	void findSubCategoryId(Integer id, Set<Integer> resultSet);
+
 }
