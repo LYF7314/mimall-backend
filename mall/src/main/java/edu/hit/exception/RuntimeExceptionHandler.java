@@ -12,10 +12,7 @@ import java.util.Objects;
 
 import static edu.hit.enums.ResponseEnum.ERROR;
 
-/**
- *
- * 异常拦截处理
- */
+
 @ControllerAdvice
 public class RuntimeExceptionHandler {
 

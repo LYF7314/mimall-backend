@@ -10,9 +10,6 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 
-/**
- * 描述：     生成二维码工具
- */
 public class QRCodeGenerator {
 
 
@@ -26,7 +23,7 @@ public class QRCodeGenerator {
 
     public static void main(String[] args) {
         try {
-            generateQRCodeImage("https://www.baidu.com/", 350, 350, "C:\\Users\\14980\\Desktop\\image\\QRTest.png");
+            generateQRCodeImage("https://www.baidu.com/", 350, 350, "F:\\大三相关\\大三下\\软件综合课设\\Materials\\QRTest.png");
         } catch (WriterException e) {
             e.printStackTrace();
         } catch (IOException e) {

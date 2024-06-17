@@ -33,39 +33,12 @@ public class OrderController {
 	 * @Param [form, session]
 	 * @return edu.hit.vo.ResponseVo<edu.hit.vo.OrderVo>
 	 **/
+	// TODO
 	@PostMapping("/orders")
 	public ResponseVo<OrderVo> create(@Valid @RequestBody OrderCreateForm form,
 									  HttpSession session) {
 		User user = (User) session.getAttribute(MallConst.CURRENT_USER);
 		return orderService.create(user.getId(), form.getShippingId());
-	}
-
-	/*
-	 * @Author Liyifan
-	 * @Description 获取订单
-	 * @Param [pageNum, pageSize, session]
-	 * @return edu.hit.vo.ResponseVo<com.github.pagehelper.PageInfo>
-	 **/
-	@GetMapping("/orders")
-	public ResponseVo<PageInfo> list(@RequestParam Integer pageNum,
-									 @RequestParam Integer pageSize,
-									 HttpSession session) {
-		User user = (User) session.getAttribute(MallConst.CURRENT_USER);
-		return orderService.list(user.getId(), pageNum, pageSize);
-	}
-
-	@GetMapping("/orders/{orderNo}")
-	public ResponseVo<OrderVo> detail(@PathVariable Long orderNo,
-									  HttpSession session) {
-		User user = (User) session.getAttribute(MallConst.CURRENT_USER);
-		return orderService.detail(user.getId(), orderNo);
-	}
-
-	@PutMapping("/orders/{orderNo}")
-	public ResponseVo cancel(@PathVariable Long orderNo,
-							 HttpSession session) {
-		User user = (User) session.getAttribute(MallConst.CURRENT_USER);
-		return orderService.cancel(user.getId(), orderNo);
 	}
 
 }
